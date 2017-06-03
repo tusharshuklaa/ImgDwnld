@@ -1,0 +1,119 @@
+#getImgOverlay {
+  position: fixed !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  z-index: 9999999999 !important;
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0% auto !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important; }
+  #getImgOverlay .giMainBody {
+    position: inherit;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0; }
+    #getImgOverlay .giMainBody .giHeader {
+      padding: 0.5em 0em;
+      background-color: grey;
+      color: white;
+      font-size: 20px;
+      height: 24px; }
+      #getImgOverlay .giMainBody .giHeader .giMultiSelect {
+        display: inline-block;
+        float: left;
+        margin-left: 10px; }
+      #getImgOverlay .giMainBody .giHeader #giCloseBtn {
+        display: inline-block;
+        float: right;
+        margin-right: 10px;
+        cursor: pointer; }
+    #getImgOverlay .giMainBody #giBody {
+      padding: 10px 0px;
+      overflow: auto;
+      height: calc(100vh - 65px); }
+      #getImgOverlay .giMainBody #giBody .giImgBody {
+        margin: auto;
+        border-radius: 0px;
+        width: calc(100% / 4);
+        overflow: hidden;
+        border: none;
+        height: calc(100% / 2.5);
+        display: inline-flex;
+        position: relative;
+        float: left; }
+        #getImgOverlay .giMainBody #giBody .giImgBody.selectedGiImg {
+          box-shadow: inset 0px 0px 5px 10px white, inset 0px 0px 6px 11px black; }
+          #getImgOverlay .giMainBody #giBody .giImgBody.selectedGiImg .giImgMetaInfo {
+            box-shadow: inset 0px 0px 5px 10px white, inset 0px 0px 6px 11px black; }
+        #getImgOverlay .giMainBody #giBody .giImgBody:hover .giImgMetaInfo {
+          opacity: 1; }
+        #getImgOverlay .giMainBody #giBody .giImgBody:hover img {
+          transform: scale(1.05); }
+        #getImgOverlay .giMainBody #giBody .giImgBody .giImgMetaInfo {
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.65);
+          margin: auto;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          cursor: pointer;
+          display: inline-block; }
+          #getImgOverlay .giMainBody #giBody .giImgBody .giImgMetaInfo input {
+            display: none; }
+        #getImgOverlay .giMainBody #giBody .giImgBody img {
+          max-height: 100%;
+          width: 100%;
+          z-index: -1;
+          -webkit-transition: all 0.8s ease-out; }
+  #getImgOverlay .spinner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: inline-block;
+    width: 20vw;
+    height: 20vw; }
+    #getImgOverlay .spinner:before {
+      content: "Looking for images";
+      position: absolute;
+      width: 18vw;
+      margin-left: -9vw;
+      margin-top: -1.8em;
+      color: white;
+      text-shadow: -1px 1px 5px grey; }
+    #getImgOverlay .spinner .double-bounce1, #getImgOverlay .spinner .double-bounce2 {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-animation: bounce 2.0s infinite ease-in-out;
+      animation: bounce 2.0s infinite ease-in-out; }
+    #getImgOverlay .spinner .double-bounce1 {
+      background-color: #FF9100; }
+    #getImgOverlay .spinner .double-bounce2 {
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+      background-color: #FFEA00; }
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1); } }
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+
+/*# sourceMappingURL=getImg.css.map */
