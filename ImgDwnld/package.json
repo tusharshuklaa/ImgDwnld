@@ -1,0 +1,21 @@
+{
+  "name": "getImg",
+  "version": "0.0.1",
+  "description": "A google chrome extension for downloading all available images from a web page",
+  "homepage": "http://documentcloud.github.com/underscore/",
+  "keywords": [
+    "image",
+    "download",
+    "extension",
+    "chrome",
+    "img"
+  ],
+  "author": "Tushar Shukla <tusharshuklaa@gmail.com>",
+  "dependencies": {
+    "@types/jquery": "^2.0.40",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.40"
+  }
+}

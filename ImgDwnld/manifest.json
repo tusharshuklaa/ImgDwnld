@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "GetImg",
+  "short_name": "Download images with ease",
+  "description": "This extension helps you download image(s) easily from any webpage.",
+  "version": "0.0.1",
+  "author": "Tushar Shukla <tusharshuklaa@gmail.com>",
+  "background": {
+    "scripts": [ "eventPage.js" ],
+    "persistent": false
+  },
+  "browser_action": {},
+  "permissions": [ "activeTab", "tabs", "http://*/*", "https://*/*" ],
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "css": [ "getImg.css" ],
+      "js": [
+        "grid.js",
+        "imagesloaded.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
